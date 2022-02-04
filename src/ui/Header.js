@@ -6,16 +6,10 @@ import Blurb from "../mdx/blurb.mdx"
 
 const Header = (props) => (
   <MDXProvider>
-    <Box as="header" sx={{ textAlign: "center", pt: 5 }}>
-      <Heading sx={{ fontSize: 6, pb: 2, px: 3 }} as="h1">
-        {config.title}
-      </Heading>
-      <Heading sx={{ pb: 3, px: [3, 4] }}>{config.subtitle}</Heading>
-      <Box sx={{ pb: 3 }}>
-        <Blurb />
-      </Box>
+    <div style={{display: 'flex', alignItems: 'center', justifyContent: 'space-around', padding: '15px auto'}}>
+      <img src={config.logo} alt={config.title} style={{width: '150px', height: 'auto', borderRadius: '7px', marginTop: 15, marginBottom: 15}} />
       <Nav />
-    </Box>
+    </div>
   </MDXProvider>
 )
 
